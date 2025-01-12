@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Capybara Terraion Recongnition</title>
+        <link rel="stylesheet"  href="/static/capybara.css" />
+    </head>
+    <body>
+        <nav>
+            <div class="menu">
+                <div class="logo">
+                    <img src="/static/cb.png" height="60px" >
+                    <a href="#Home">Terrain Recongnition</a>
+                </div>
+                <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Contact">Contact Us</a></li>
+                    <li><a href="#Feedback">FeedBack</a></li>
+                </ul>
+            </div>
+        </nav>
+            <div class="section0" id="Home">
+                <div class="center0">
+                    <div class="title0">Terrain recongnition is the art of deciphering Earth's diverese landscapes at a glance</div>
+                    
+                </div>
+            </div>
+            <div class="section1" id="About">
+                <div class="center1">
+                    <div class="title1">Recongnizing the sorts of terrain from photograph and classifying them. To achieve a terrain categorization effect and the ability to generalize the actul effect. To determine a classification of the landsacape based on the spatial texture of the area around the input point.</div>
+                    <div class="btns">
+                        <button><a href="#123">Try me</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="section" id="123">
+                <div class="center2">
+                <center><div id="dropzone" style="border: 2px dashed #ccc;background-color: white; width: 900px; height: 300px; text-align: center;">
+                    <img src="/static/DragandDrop.png">
+                    <p>Drag and drop an image here to upload</p>
+                </div></center>
+                <form action="/upload" method="POST" enctype="multipart/form-data">
+                    <input type="file" name="image" style="display: none;">
+                </form>
+                <script>
+                    const dropzone = document.getElementById('dropzone');
+            
+                    dropzone.addEventListener('dragover', (e) => {
+                        e.preventDefault();
+                    });
+            
+                    dropzone.addEventListener('drop', (e) => {
+                        e.preventDefault();
+            
+                        const fileInput = document.querySelector('input[type="file"]');
+                        fileInput.files = e.dataTransfer.files;
+                        document.querySelector('form').submit();
+                        alert("Submitted");
+                    });
+                </script>
+                <br>
+                <b><p class="note">*Satellite images only!</p>
+                </div>
+                </div>
+            </div>
+            <div class="section2" id="Contact">
+                <div class="center2">
+                    <div class="title2">Telephone no. :044-58-792 </br>                                       
+                        Email :capybarasih@gmail.com
+                    </div>
+                </div>
+            </div>
+            <div class="section3" id="Feedback">
+                <div class="center3">
+                    <div class="title3">FeedBack</div>
+                    <div class="forms">
+                    <form>
+                        <div>Email: <input type="email" placeholder=" abc@gmail.com"></div><br>
+                        <div>Suggestions: <Textarea></Textarea></div>
+                    </form>
+                    <div class="btns">
+                        <button>Submit</button>
+                    </div></div>
+                </div>
+            </div>  
+    </body>
+</html>
